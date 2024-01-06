@@ -1,0 +1,27 @@
+<section class="product-container">
+    <div class="inside-product-container image-container">
+        <img src="{{product.image}}" alt="Imagem do produto">
+    </div>
+    <div class="inside-product-container">
+        <div class="product-general-info">
+            <div class="info-container">
+                <h1 class="name">{{product.name}}</h1>
+                <p class="description">{{product.description}}</p>
+                <p class="price"><span>R$</span>{{product.price}}</p>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="buttons">
+                <div>
+                    <a href="/products" class="btn">Comprar</a>
+                    <a href="/products" class="btn addCart">Adicionar ao carrinho</a>
+                </div>
+                <a href="/products" class="btn back">Voltar</a>
+                <form action="/products/remove/{{product._id}}" method="POST">
+                    <input type="submit" value="Excluir produto" class="btn delete btn-crud">
+                </form>
+                <a href="/products/edit/{{product._id}}" class="btn edit btn-crud">Editar</a>
+            </div>
+        </div>
+    </div>
+</section>

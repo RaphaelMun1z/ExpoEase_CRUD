@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor-1: #1b2727;
+    --cor-2: #3c5148;
+    --cor-3: #6b8e4e;
+    --cor-4: #b2c5b2;
+    --cor-5: #d5dddf;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--cor-4);
+}
+
+/*------| NAV |------*/
+nav {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: var(--cor-5);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 4em;
+    border-radius: 0 0 50px 50px;
+}
+
+nav .logo-container {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav .logo-container img {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: fit-content;
+    object-fit: contain;
+}
+
+nav .logo-container {
+    font-weight: 600;
+    font-size: 16pt;
+    color: #1b2727;
+}
+
+nav ul {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    height: fit-content;
+    list-style: none;
+    gap: 15px;
+}
+
+/*------| BODY CONTAINER |-----*/
+.body-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: transparent;
+    padding: 4em;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+}
+
+section>.section-title {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    font-size: 35pt;
+    color: #fff;
+    margin: auto;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+section>.section-title::after {
+    content: '';
+    position: absolute;
+    display: flex;
+    width: 50%;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*------| FORM |-------*/
+.form-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.form-container>.title {
+    font-size: 50pt;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.form-container form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    gap: 20px;
+    color: #fff;
+}
+
+.form-container form .form-control {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    gap: 7px;
+}
+
+.form-container form .form-control label {
+    font-size: 16pt;
+}
+
+.form-container form .form-control input,
+.form-container form .form-control textarea {
+    position: relative;
+    display: flex;
+    width: 600px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14pt;
+    padding: .5em 1em;
+    background-color: whitesmoke;
+    color: #1b2727;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.form-container form .form-control textarea {
+    height: 150px;
+    min-height: 150px;
+    max-height: 200px;
+    resize: vertical;
+}
+
+.btn {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    background-color: #6b8e4e;
+    border-radius: 10px;
+    padding: 1em 2em;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.btn:hover {
+    opacity: .5;
+}
+
+.btn-crud{
+    font-size: 12pt;
+}
+
+/*------| PRODUCTS |------*/
+.products-container {
+    flex-direction: column;
+}
+
+.products-container>.products {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    gap: 20px 1%;
+}
+
+.products>.product-card {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: fit-content;
+    height: auto;
+    min-height: 300px;
+    background-color: var(--cor-5);
+    padding: 2em;
+    flex: 0 1 24%;
+    border-radius: 20px;
+    justify-content: space-between;
+    box-shadow: rgba(40, 41, 61, 0.08) 0px 0px 1px, rgba(96, 97, 112, 0.16) 0px 0.5px 2px;
+    background: rgb(27, 39, 39);
+    background: linear-gradient(304deg, rgba(27, 39, 39, 1) 10%, rgba(60, 81, 72, 1) 51%, rgba(107, 142, 78, 1) 100%);
+}
+
+.products>.product-card>img {
+    position: relative;
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+    margin: auto;
+    padding: 2em;
+}
+
+.products>.product-card>.product-info {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    color: #fff;
+}
+
+.products>.product-card>.product-info>h3 {
+    font-size: 25pt;
+}
+
+.products>.product-card>.product-info>p {
+    font-size: 20pt;
+}
+
+.products>.product-card>.product-info>.actions {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 1em;
+}
+
+/*-------| SINGLE PRODUCT |--------*/
+.product-container {
+    height: 100vh;
+    background: rgb(27, 39, 39);
+    background: linear-gradient(304deg, rgba(27, 39, 39, 1) 10%, rgba(60, 81, 72, 1) 51%, rgba(107, 142, 78, 1) 100%);
+    border-radius: 30px;
+}
+
+.product-container>.image-container {
+    justify-content: center;
+    align-items: center;
+    padding: 10em;
+}
+
+.product-container>.image-container>img {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-container>.inside-product-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+
+.inside-product-container>div {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    padding: 2em 4em;
+}
+
+.inside-product-container>.product-general-info {
+    align-items: flex-end;
+}
+
+.inside-product-container>.actions {
+    align-items: flex-start;
+}
+
+.inside-product-container>.product-general-info>.info-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    gap: 20px;
+    color: #fff;
+}
+
+.inside-product-container>.product-general-info>.info-container .name {
+    font-size: 50pt;
+    font-weight: 800;
+}
+
+.inside-product-container>.product-general-info>.info-container .description {
+    font-size: 13pt;
+    font-weight: 300;
+}
+
+.inside-product-container>.product-general-info>.info-container .price {
+    font-size: 30pt;
+    font-weight: 500;
+}
+
+.inside-product-container>.product-general-info>.info-container .price span {
+    font-size: 20pt;
+    font-weight: 900;
+    margin-right: 5px;
+}
+
+.inside-product-container>.actions>.buttons {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: fit-content;
+    height: fit-content;
+    gap: 10px;
+}
+
+.inside-product-container>.actions>.buttons>div {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.buttons .addCart {
+    background-color: orange;
+}
+
+.buttons .back {
+    width: 100%;
+    justify-content: center;
+    background-color: transparent;
+    color: rgb(233, 49, 49);
+    border: 2px solid rgb(233, 49, 49);
+}
+
+.buttons .delete {
+    background-color: rgb(233, 49, 49);
+}
+
+.buttons .edit {
+    background-color: #3c5148;
+}
+
+/*------| FOOTER |------*/
+footer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 250px;
+    background-color: var(--cor-5);
+    border-radius: 50px 50px 0 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 30pt;
+    text-transform: uppercase;
+}
